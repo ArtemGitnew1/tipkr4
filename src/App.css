@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    color: #4a5568;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.word-card {
+    background: #f7fafc;
+    border-radius: 15px;
+    padding: 40px 30px;
+    margin: 30px 0;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.word-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+}
+
+.word-display h2 {
+    font-size: 3rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.translation {
+    margin-top: 20px;
+    padding: 15px;
+    background: #edf2f7;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.translation span {
+    font-size: 1.8rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.controls {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 200px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #0782ff 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(245, 87, 108, 0.3);
+}
+
+.stats {
+    margin: 20px 0;
+    padding: 15px;
+    background: #edf2f7;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.instructions {
+    margin-top: 30px;
+    text-align: left;
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.instructions h3 {
+    color: #4a5568;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.instructions ol {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    color: #718096;
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .word-display h2 {
+        font-size: 2.5rem;
+    }
+
+    .translation span {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        min-width: 150px;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.word-card {
+    animation: fadeIn 0.5s ease;
+}
+
+.translation {
+    animation: fadeIn 0.3s ease;
 }
