@@ -25,6 +25,6 @@
 Разработан тренажёр для изучения английских слов, обеспечивающий эффективное запоминание лексики за счет последовательного показа и проверки знаний.
 
 ## Скриншоты
-![Английское слово](screenshots/screenshot1.png)
-![Перевод слова](screenshots/screenshot2.png)
-![Завершение обучения](screenshots/screenshot3.png)
+![Английское слово](screenshots/screenshot1.png) {: width="400" }
+![Перевод слова](screenshots/screenshot2.png) {: width="400" }
+![Завершение обучения](screenshots/screenshot3.png) {: width="400" }
